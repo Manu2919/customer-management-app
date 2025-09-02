@@ -1,0 +1,132 @@
+.address-list {
+    margin-top: 20px;
+}
+
+.addresses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.addresses-header h3 {
+    margin: 0;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.no-addresses {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.addresses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.address-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid #007bff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.address-card h4 {
+    margin-top: 0;
+    color: #007bff;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.address-field {
+    margin: 8px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.address-field strong {
+    color: #555;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+.address-field span {
+    color: #333;
+    word-break: break-word;
+}
+
+.address-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: flex-end;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.btn-edit {
+    background: #ffc107;
+    color: black;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.loading-addresses {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.error-addresses {
+    text-align: center;
+    padding: 20px;
+    color: #dc3545;
+    background: #f8d7da;
+    border-radius: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .addresses-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .address-field {
+        flex-direction: column;
+    }
+    
+    .address-actions {
+        justify-content: center;
+    }
+}
