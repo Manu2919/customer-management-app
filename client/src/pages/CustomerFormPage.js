@@ -27,7 +27,7 @@ const CustomerFormPage = () => {
     const fetchCustomer = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:5000/api/customers/${id}`);
+            const response = await axios.get(`https://customer-management-app-07cm.onrender.com/api/customers/${id}`);
             const customer = response.data.data || response.data;
             setFormData({
                 first_name: customer.first_name,
@@ -88,9 +88,9 @@ const CustomerFormPage = () => {
 
         try {
             if (isEditMode) {
-                await axios.put(`http://localhost:5000/api/customers/${id}`, formData);
+                await axios.put(`https://customer-management-app-07cm.onrender.com/api/customers/${id}`, formData);
             } else {
-                await axios.post('http://localhost:5000/api/customers', formData);
+                await axios.post('https://customer-management-app-07cm.onrender.com/api/customers', formData);
             }
             
             navigate('/customers');
@@ -141,5 +141,6 @@ const CustomerFormPage = () => {
         </div>
     );
 };
+
 
 export default CustomerFormPage;
