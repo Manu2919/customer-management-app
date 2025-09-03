@@ -15,7 +15,7 @@ const CustomerListPage = () => {
     const fetchCustomers = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:5000/api/customers`, {
+            const response = await axios.get(`https://customer-management-app-07cm.onrender.com/api/customers`, {
                 params: {
                     search: searchTerm,
                     page: currentPage,
@@ -129,4 +129,5 @@ const CustomerListPage = () => {
     );
 };
   
+
 export default CustomerListPage;
