@@ -37,7 +37,7 @@ const CustomerDetailPage = () => {
     const fetchAddresses = async () => {
         try {
             setAddressLoading(true);
-            const response = await axios.get(`http://localhost:5000/api/customers/${id}/addresses`);
+            const response = await axios.get(`https://customer-management-app-07cm.onrender.com/api/customers/${id}/addresses`);
             setAddresses(response.data.addresses || response.data || []);
         } catch (err) {
             console.error('Error fetching addresses:', err);
@@ -122,3 +122,4 @@ const CustomerDetailPage = () => {
 
 
 export default CustomerDetailPage;
+
