@@ -19,7 +19,7 @@ const CustomerDetailPage = () => {
             setLoading(true);
             
             // Fetch customer details
-            const customerResponse = await axios.get(`http://localhost:5000/api/customers/${id}`);
+            const customerResponse = await axios.get(`https://customer-management-app-07cm.onrender.com/api/customers/${id}`);
             setCustomer(customerResponse.data.data || customerResponse.data);
             
             // Fetch customer addresses
@@ -119,5 +119,6 @@ const CustomerDetailPage = () => {
         </div>
     );
 };
+
 
 export default CustomerDetailPage;
