@@ -28,7 +28,7 @@ const AddressFormPage = () => {
     const fetchAddress = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:5000/api/addresses/${addressId}`);
+            const response = await axios.get(`https://customer-management-app-07cm.onrender.com/api/addresses/${addressId}`);
             const address = response.data.data || response.data;
             setFormData({
                 address_details: address.address_details,
@@ -94,9 +94,9 @@ const AddressFormPage = () => {
 
         try {
             if (isEditMode) {
-                await axios.put(`http://localhost:5000/api/addresses/${addressId}`, formData);
+                await axios.put(`https://customer-management-app-07cm.onrender.com/api/addresses/${addressId}`, formData);
             } else {
-                await axios.post(`http://localhost:5000/api/customers/${customerId}/addresses`, formData);
+                await axios.post(`https://customer-management-app-07cm.onrender.com/api/customers/${customerId}/addresses`, formData);
             }
             
             navigate(`/customers/${customerId}`);
@@ -142,5 +142,6 @@ const AddressFormPage = () => {
         </div>
     );
 };
+
 
 export default AddressFormPage;
