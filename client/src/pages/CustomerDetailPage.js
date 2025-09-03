@@ -49,7 +49,7 @@ const CustomerDetailPage = () => {
     const handleDeleteAddress = async (addressId) => {
         if (window.confirm('Are you sure you want to delete this address?')) {
             try {
-                await axios.delete(`http://localhost:5000/api/addresses/${addressId}`);
+                await axios.delete(`https://customer-management-app-07cm.onrender.com/api/addresses/${addressId}`);
                 fetchAddresses(); // Refresh addresses
             } catch (err) {
                 alert('Failed to delete address');
@@ -122,4 +122,5 @@ const CustomerDetailPage = () => {
 
 
 export default CustomerDetailPage;
+
 
