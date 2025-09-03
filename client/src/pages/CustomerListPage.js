@@ -35,7 +35,7 @@ const CustomerListPage = () => {
     const handleDelete = async (customerId) => {
         if (window.confirm('Are you sure you want to delete this customer?')) {
             try {
-                await axios.delete(`http://localhost:5000/api/customers/${customerId}`);
+                await axios.delete(`https://customer-management-app-07cm.onrender.com/api/customers/${customerId}`);
                 fetchCustomers(); // Refresh the list
             } catch (err) {
                 alert('Failed to delete customer');
@@ -131,3 +131,4 @@ const CustomerListPage = () => {
   
 
 export default CustomerListPage;
+
